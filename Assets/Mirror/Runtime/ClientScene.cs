@@ -963,10 +963,10 @@ namespace Mirror
                         // scene object.. disable it in scene instead of destroying
                         localObject.gameObject.SetActive(false);
                         spawnableObjects[localObject.sceneId] = localObject;
+                        localObject.Reset();
                     }
                 }
                 NetworkIdentity.spawned.Remove(netId);
-                localObject.Reset();
             }
             else
             {
